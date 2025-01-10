@@ -9,14 +9,13 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain.text_splitter import CharacterTextSplitter
 import os
-from dotenv import load_dotenv
 import warnings
 
 warnings.filterwarnings("ignore")
 
-load_dotenv()
 
-api_key = os.getenv("OPENAI_API_KEY")
+
+api_key = st.secrets["OPENAI_API_KEY"]
 # Initialize OpenAI client and embeddings
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 embedding = OpenAIEmbeddings(model="text-embedding-3-small")
