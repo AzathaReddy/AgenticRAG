@@ -1,3 +1,5 @@
 .env
 English_faiss_index
 chatbot
+.streamlit
+.devcontainer
